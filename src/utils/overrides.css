@@ -1,0 +1,19 @@
+a,h2,h3,h4,h5,h6 {
+  color: white !important;
+}
+
+a {
+  font-weight: bold;
+}
+
+p {
+  color: white !important;
+}
+
+#test123 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+  cursor: pointer;
+}
