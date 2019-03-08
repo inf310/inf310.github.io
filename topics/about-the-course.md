@@ -22,7 +22,7 @@
 - [Syllabus](https://docs.google.com/document/d/1vK06Qxq2RottrihVFHol-wdwaHekmx35AxzNLEwYcl4/edit?usp=sharing)
 - [Slides](https://modern-js.github.io)
 - [GitHub](https://github.com/modern-js)
-- [Books and articles](/books-and-articles/)
+- [Additional reading materials](/reading-materials/)
 ---
 
 ## Topics
@@ -72,6 +72,11 @@
 - 1 continuous assignment worth 30% of the final grade.
 - Implement a project using technologies covered in class
   - Extra functionality and new tools for bonus points
+
+---
+
+### Homework assignment (continued)
+
 - Write tests to verify the solution (or TDD)
 - Write a Readme file presenting the solution
 - Push the solution to a github repository

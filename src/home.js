@@ -1,32 +1,40 @@
 import React from 'react';
 
-// import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom';
 
 import Deck from './utils/styled-markdown-deck';
+import Menu from './utils/menu';
 
-const fetchTopic = topic => {
-  return import(`../topics/${topic}.md`)
-};
+const defaultToErrorSlide = err => ({
+  default: `🤕 Something went wrong \n\n ${err} \n\n [Go to course home](/fullstack-js/)`
+});
 
-const useTopic = () => {
-  const [name, loadTopic] = React.useState();
+const LoadableDeck = ({ match }) => {
+  const topic = (match && match.params.topic) || 'about-the-course';
   const [content, setContent] = React.useState();
-  React.useEffect(() =>
-    name && fetchTopic(name).then(loadedContent => setContent(loadedContent.default))
-  , [name]);
-
-  return { name, content, loadTopic };
-};
+  React.useEffect(() => {
+    topic && import(`../topics/${topic}.md`)
+      .catch(defaultToErrorSlide)
+      .then(loadedContent => {
+        setContent(loadedContent.default);
+        document.title = `INF310: ${topic}`;
+        if (window.location.hash.length < 2) {
+          window.location += '#/0';
+        }
+      });
+  }, [topic]);
+  return <Deck key={topic} slides={content} />
+}
 
 export default () => {
-  const { name, content, loadTopic } = useTopic();
-  return (<React.Fragment>
-    Topic Name: {name}
-    <div id="test123">
-      <button onClick={() => { loadTopic('about-the-course')}}>course</button>
-      <button onClick={() => { loadTopic('links')}}>links</button>
-      <button onClick={() => { loadTopic('code')}}>code</button>
-    </div>
-    <Deck slides={content} />
-  </React.Fragment>);
+  return (
+    <BrowserRouter basename="/fullstack-js">
+      <React.Fragment>
+      <Route component={Menu} />
+      <Switch>
+        <Route path="/:topic" component={LoadableDeck} />
+        <Redirect exact from="/" to="/about-the-course/" />
+      </Switch>
+    </React.Fragment>
+  </BrowserRouter>);
 };

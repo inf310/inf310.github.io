@@ -27,8 +27,10 @@ const deckOptions = {
   transitionDuration: 200,
 };
 
-export default ({ slides }) => (
+const StyledDeck = ({ slides }) => (
   <Deck {...deckOptions}>
     {slides && MarkdownSlides(slides)}
   </Deck>
 );
+
+export default StyledDeck;

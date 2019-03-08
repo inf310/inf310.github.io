@@ -7,6 +7,9 @@ import Redbox from 'redbox-react';
 
 import Home from './home';
 
+// require('prismjs/components/prism-markup-templating.min');
+require('prismjs/components/prism-bash');
+
 const CustomErrorReporter = ({ error }) => <Redbox error={error} />;
 
 CustomErrorReporter.propTypes = {
