@@ -125,4 +125,9 @@ code {
   	border-radius: 10px;
   	background-color: #F5F5F5;
   }
+
+  .menu_divider {
+    list-style: none;
+    text-align: center;
+  }
 }

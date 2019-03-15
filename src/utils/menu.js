@@ -4,10 +4,15 @@ import { NavLink } from 'react-router-dom';
 
 const topics = [
   { link: 'about-the-course', text: 'About the course' },
-  { link: 'reading-materials', text: 'Additional reading materials' },
+  { link: 'reading-materials', text: 'Additinal reading materials' },
+  { divider: true, text: 'Week 1' },
   { link: 'web-dev-overview', text: 'Overview of web development' },
-  { link: 'react-basics', text: 'Intro to React' },
-  { link: 'express-basics', text: 'Intro to Express' },
+  { link: 'react-intro', text: 'Intro to React' },
+  { link: 'express-intro', text: 'Intro to Express' },
+  { divider: true, text: 'Week 2' },
+  { link: 'npm', text: 'Intro to npm' },
+  { link: 'express-and-files', text: 'Express and files' },
+  { link: 'react-forms', text: 'React forms' },
 ];
 
 const locationMatches = link =>
@@ -20,7 +25,7 @@ const MenuButton = ({ toggle }) => (
     className="menu_button"
     onClick={toggle}>
       <img alt="js logo" width="50px" src="/fullstack-js/images/js-icon.png" />
-      <span class="menu_title">INF310b: React and Express</span>
+      <span className="menu_title">INF310b: React and Express</span>
   </span>
 );
 
@@ -43,15 +48,17 @@ const Menu = () => {
       <MenuButton toggle={toggleMenu} />
       { menuOpen &&
       <ul className="menu_list">
-      {topics.map(({ link, text }) => (
-        <li key={link}>
-        <NavLink
-          to={`/${link}/`}
-          isActive={locationMatches(link)}
-          onClick={hideMenu}
-          activeClassName="menu_active_item">
-            {text}
-        </NavLink>
+      {topics.map(({ link, text, divider }) => (
+        divider
+        ? <li key={text} className="menu_divider">{text}</li>
+        : <li key={link}>
+          <NavLink
+            to={`/${link}/`}
+            isActive={locationMatches(link)}
+            onClick={hideMenu}
+            activeClassName="menu_active_item">
+              {text}
+          </NavLink>
         </li>
       ))}
       </ul>}
