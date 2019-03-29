@@ -12,7 +12,8 @@ const topics = [
   { divider: true, text: 'Week 2' },
   { link: 'npm', text: 'Intro to npm' },
   { link: 'express-and-files', text: 'Express and files' },
-  { link: 'react-forms', text: 'React forms' },
+  { link: 'react-forms', text: 'React refs' },
+  { link: 'react-context', text: 'React context' },
 ];
 
 const locationMatches = link =>

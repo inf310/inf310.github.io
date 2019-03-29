@@ -1,4 +1,4 @@
-# Forms with React
+# React refs
 
 ---
 
@@ -33,7 +33,7 @@ Refs are a way to access imperative APIs
 
 ---
 
-## React refs (using class)
+## React refs (with a class)
 
 ```jsx
   class ClassyFocusedInput extends React.Component {
@@ -102,6 +102,23 @@ using React state to keep the value of a field
 
 ---
 
+## Callback refs
+
+Sometimes we need to know when the ref is attached to a different node
+
+```jsx
+  const CoinFlip = () => {
+    const coinFlip = Math.random() < 0.5;
+    const alertNodeId = node => (node && alert(node.id));
+
+    return coinFlip
+      ? <div id="heads" ref={alertNodeId}>Heads</div>
+      : <div id="tails" ref={alertNodeId}>Tails</div>;
+  };
+```
+
+---
+
 ## Hoisting state
 
 ```jsx
@@ -109,17 +126,47 @@ using React state to keep the value of a field
     const [name, setName] = useState(props.savedName);
 
     const setAndPassToParent = (event) => {
-      const value = event.target.value;
-      setName(value);
-      props.onNameChange(value);
+      setName(event.target.value);
+      props.onNameChange(event.target.value);
     };
 
     return (
-      <React.Fragment>
-        Enter your name:
+      <div>
+        <label>Enter your name:</label>
         <input value={firstName} onChange={setAndPassToParent} />
-      </React.Fragment>
+      </div>
     );
+  }
+```
+
+---
+
+## Forward refs
+
+Expose a child ref as this component's ref
+
+```jsx
+  const FancyInput = React.forwardRef((props, ref) => (
+    <input {...props} style={fancyStyle} ref={ref} />
+  ));
+```
+
+---
+
+## Instance methods
+
+a component can expose custom imperative methods through a ref
+
+```jsx
+  class Switch extends React.Component {
+    state = { on: false };
+    toggle() {
+      this.setState(oldState => ({ on: !oldState.on }));
+    }
+
+    render() {
+      return <div>{this.state.on ? 'On' : 'Off'}</div>;
+    }
   }
 ```
 
@@ -148,5 +195,6 @@ a more powerful version of useState
 
 ```
 ---
+
 
 ## Questions?
