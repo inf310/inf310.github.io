@@ -2,9 +2,46 @@
 
 ---
 
-## Passing props
+## Passing multiple connected props down the tree
 
-A parent can pass props to its children
+```jsx
+  const MyUserAwareApp = ({ userName, userAvatar }) => (
+    <div>
+      <Header userName={userName} userAvatar={userAvatar} />
+      <MainContent userName={userName} userAvatar={userAvatar} />
+      <Footer userName={userName} userAvatar={userAvatar} />
+    </div>
+  );
+
+  const Header = props => (
+    <Link href={`/users/${props.userName}`} />
+      <Image src={props.userAvatar} />
+    </Link>
+  );
+```
+
+---
+
+## Passing elements down the tree
+
+```jsx
+  const MyUserAwareApp = ({ userName, userAvatar }) => {
+    const userLink = (
+      <Link href={`/users/${props.userName}`} />
+        <Image src={props.userAvatar} />
+      </Link>);
+
+    return <div>
+      <Header userLink={userLink} />
+      <MainContent userLink={userLink} />
+      <Footer userLink={userLink} />
+    </div>
+  };
+```
+
+---
+
+## Passing props deep down the tree
 
 ```jsx
   const MyThemedApp = props => (
@@ -25,7 +62,7 @@ A parent can pass props to its children
 
 ---
 
-## Problems with passing props
+## Problems with passing props deep in the tree
 
 it is tedious and also not all components in between care about these values
 
@@ -37,10 +74,6 @@ it is tedious and also not all components in between care about these values
       <Article>
         <Button> {/* <-- actually needs theme */}
 ```
-
----
-
-## Passing elements down the tree
 
 ---
 
@@ -81,6 +114,31 @@ it is tedious and also not all components in between care about these values
 ---
 
 ## Using multiple contexts
+
+```jsx
+  const ThemedTranslatedButton = () => {
+    const theme = React.useContext(ThemeContext);
+    const texts = React.useContext(LanguageContext);
+
+    return (
+      <ThemeContext.Consumer>
+        {(theme) =>
+          <LanguageContext.Consumer>
+            {(texts) =>
+              <button style={theme.buttonStyles}>
+                {texts.buttonText}
+              </button>
+            }
+          </LanguageContext.Consumer>
+        }
+      </ThemeContext.Consumer>
+    );
+  }
+```
+
+---
+
+## Using multiple contexts with hooks
 
 ```jsx
   const ThemedTranslatedButton = () => {

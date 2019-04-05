@@ -13,7 +13,10 @@ const topics = [
   { link: 'npm', text: 'Intro to npm' },
   { link: 'express-and-files', text: 'Express and files' },
   { link: 'react-forms', text: 'React refs' },
+  { divider: true, text: 'Week 3' },
   { link: 'react-context', text: 'React context' },
+  { link: 'making-requests', text: 'Making requests' },
+  { link: 'connecting-react-and-express', text: 'Going fullstack' },
 ];
 
 const locationMatches = link =>
