@@ -18,12 +18,18 @@ const LoadableDeck = ({ match }) => {
       .then(loadedContent => {
         setContent(loadedContent.default);
         document.title = `INF310: ${topic}`;
-        if (window.location.hash.length < 2) {
-          window.location += '#/0';
-        }
+        const hash = window.location.hash.length < 2
+          ? '#/0'
+          : window.location.hash;
+
+        window.location.hash = hash;
       });
   }, [topic]);
-  return <Deck key={topic} slides={content} />
+
+  return <Deck
+    key={topic}
+    slides={content}
+  />
 }
 
 export default () => {

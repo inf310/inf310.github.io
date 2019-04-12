@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{883:function(n,p){n.exports='# Connection Express and React\n\n---\n\n## Running separately\n\nAdd a `proxy` property to your React app\'s `package.json`\n\n```js\n  "proxy": "http://localhost:5000/",\n```\n\nThen run your Express and Express apps\n```bash\n  cd express-app/\n  npm run start\n\n  cd ../react-app/\n  npm run start\n```\n\n---\n\n## Demo\n'}}]);
-//# sourceMappingURL=2.babf6729.chunk.js.map

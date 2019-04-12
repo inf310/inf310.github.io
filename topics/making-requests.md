@@ -50,7 +50,7 @@ Request the user when the component loads
     render() {
       if (this.state.error) { return <Error msg={this.state.error} />;}
       if (this.state.loading) { return <Loader />; }
-      return <UserProfile user={this.state.userData} />;
+      return <UserDetails user={this.state.userData} />;
     }
   }
 ```
@@ -71,7 +71,7 @@ Request the user when the `userId` changes
 
     if (state.error) { return <Error msg={this.state.error} />;}
     if (state.loading) { return <Loader />; }
-    return <UserProfile user={state.data} />;
+    return <UserDetails user={state.data} />;
   };
 ```
 
@@ -81,7 +81,7 @@ Request the user when the `userId` changes
 
 ```js
   const makeRequest = (userId, dispatch) => {
-    dispatch('LOADING');
+    dispatch({ status: 'LOADING' });
     fetch(`/users/${userId}`)
       .then(data => dispatch({ status: 'SUCCESS', payload: data }))
       .catch(error => dispatch({ status: 'ERROR', payload: error }));
@@ -114,6 +114,35 @@ Request the user when the `userId` changes
       .then(data => res.json(data[0]))
       .catch(error => res.status(500).json(error));
   });
+```
+
+---
+
+## Combining results
+
+```js
+  Promise.all([fetch(url1), fetch(url2)])
+    .then([res1, res2] => Promise.all([res1.json(), res2.json()]))
+    .then([data1, data2] => doStuffWithData(data1, data2));
+```
+-- or --
+```js
+  Promise.all([
+    fetch(url1).then(res1 => res.json()),
+    fetch(url2).then(res2 => res.json())
+  ]).then([data1, data2] => doStuffWithData(data1, data2));
+```
+
+---
+
+## Fetching redundancy
+
+```js
+  Promise.race([
+    fetch(fromServer1)
+    fetch(fromServer2)
+  ]).then(response => response.json())
+    .then(data => doStuffWithData(data));
 ```
 
 ---

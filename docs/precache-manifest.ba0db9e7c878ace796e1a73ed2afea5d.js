@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/fullstack-js/static/js/7.29a8bcdb.chunk.js"
   },
   {
-    "revision": "68d17e2bfec48d9494ae",
+    "revision": "923fb284efcdc40951d0",
     "url": "/fullstack-js/static/css/main.38e94a26.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/fullstack-js/static/js/1.75f255e7.chunk.js"
   },
   {
-    "revision": "babf672920e1314d2c35",
-    "url": "/fullstack-js/static/js/2.babf6729.chunk.js"
+    "revision": "923f4a9696bc96b664ff",
+    "url": "/fullstack-js/static/js/2.923f4a96.chunk.js"
   },
   {
     "revision": "800cfa22949f9c58e0ea",
@@ -24,16 +24,16 @@ self.__precacheManifest = [
     "url": "/fullstack-js/static/js/4.ec44c624.chunk.js"
   },
   {
-    "revision": "82778e1e3da5d2caf0f9",
-    "url": "/fullstack-js/static/js/5.82778e1e.chunk.js"
+    "revision": "7b8412c11c6a8517b0d8",
+    "url": "/fullstack-js/static/js/5.7b8412c1.chunk.js"
   },
   {
     "revision": "edb08b7adf3ea9a88a67",
     "url": "/fullstack-js/static/js/6.edb08b7a.chunk.js"
   },
   {
-    "revision": "68d17e2bfec48d9494ae",
-    "url": "/fullstack-js/static/js/main.68d17e2b.chunk.js"
+    "revision": "923fb284efcdc40951d0",
+    "url": "/fullstack-js/static/js/main.923fb284.chunk.js"
   },
   {
     "revision": "af02bb2be23029034167",
@@ -52,8 +52,8 @@ self.__precacheManifest = [
     "url": "/fullstack-js/static/js/11.03974104.chunk.js"
   },
   {
-    "revision": "85a6d897337edbda87bc",
-    "url": "/fullstack-js/static/js/runtime~main.85a6d897.js"
+    "revision": "1c4d4996308b712f3d38",
+    "url": "/fullstack-js/static/js/runtime~main.1c4d4996.js"
   },
   {
     "revision": "75285fac8f598c12da00",
@@ -64,7 +64,7 @@ self.__precacheManifest = [
     "url": "/fullstack-js/static/css/12.e7133c85.chunk.css"
   },
   {
-    "revision": "fa23575f3abe5a32d819b3b9cb467e66",
+    "revision": "9e8f54c2ca7b3b94cad9c56e7b606776",
     "url": "/fullstack-js/index.html"
   }
 ];

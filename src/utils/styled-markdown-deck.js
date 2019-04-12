@@ -27,7 +27,7 @@ const deckOptions = {
   transitionDuration: 200,
 };
 
-const StyledDeck = ({ slides }) => (
+const StyledDeck = ({ slides, startingAt = 1 }) => (
   <Deck {...deckOptions}>
     {slides && MarkdownSlides(slides)}
   </Deck>
