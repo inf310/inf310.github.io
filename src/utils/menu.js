@@ -20,6 +20,8 @@ const topics = [
   { divider: true, text: 'Week 4' },
   { link: '/react-context/', text: 'React context' },
   { link: '/connecting-react-and-express/', text: 'Going fullstack' },
+  { divider: true, text: 'Week 5' },
+  { link: '/react-patterns/', text: 'React patterns' },
 ];
 
 const locationMatches = link =>
