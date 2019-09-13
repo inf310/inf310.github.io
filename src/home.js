@@ -6,7 +6,7 @@ import Deck from './utils/styled-markdown-deck';
 import Menu from './utils/menu';
 
 const defaultToErrorSlide = err => ({
-  default: `🤕 Something went wrong \n\n ${err} \n\n [Go to course home](/fullstack-js/)`
+  default: `🤕 Something went wrong \n\n ${err} \n\n [Go to course home](/)`
 });
 
 const LoadableDeck = ({ match }) => {
@@ -34,7 +34,7 @@ const LoadableDeck = ({ match }) => {
 
 export default () => {
   return (
-    <BrowserRouter basename="/fullstack-js">
+    <BrowserRouter>
       <React.Fragment>
       <Route component={Menu} />
       <Switch>

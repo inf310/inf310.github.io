@@ -9,19 +9,19 @@ const topics = [
   { link: '/web-dev-overview/', text: 'Overview of web development' },
   { link: '/react-intro/', text: 'Intro to React' },
   { link: '/express-intro/', text: 'Intro to Express' },
-  { divider: true, text: 'Week 2' },
-  { link: '/npm/', text: 'Intro to npm' },
-  { link: '/express-and-files/', text: 'Express and files' },
-  { link: '/react-forms/', text: 'React refs' },
-  { divider: true, text: 'Week 3' },
-  { link: '/about-the-course/#/11', text: 'Midterm test' },
-  { link: '/about-the-course/#/8', text: 'Lab session 1' },
-  { link: '/making-requests/', text: 'Making requests' },
-  { divider: true, text: 'Week 4' },
-  { link: '/react-context/', text: 'React context' },
-  { link: '/connecting-react-and-express/', text: 'Going fullstack' },
-  { divider: true, text: 'Week 5' },
-  { link: '/react-patterns/', text: 'React patterns' },
+  // { divider: true, text: 'Week 2' },
+  // { link: '/npm/', text: 'Intro to npm' },
+  // { link: '/express-and-files/', text: 'Express and files' },
+  // { link: '/react-forms/', text: 'React refs' },
+  // { divider: true, text: 'Week 3' },
+  // { link: '/about-the-course/#/11', text: 'Midterm test' },
+  // { link: '/about-the-course/#/8', text: 'Lab session 1' },
+  // { link: '/making-requests/', text: 'Making requests' },
+  // { divider: true, text: 'Week 4' },
+  // { link: '/react-context/', text: 'React context' },
+  // { link: '/connecting-react-and-express/', text: 'Going fullstack' },
+  // { divider: true, text: 'Week 5' },
+  // { link: '/react-patterns/', text: 'React patterns' },
 ];
 
 const locationMatches = link =>
@@ -35,7 +35,7 @@ const MenuButton = ({ toggle }) => (
     aria-label="menu"
     className="menu_button"
     onClick={toggle}>
-      <img alt="js logo" width="50px" src="/fullstack-js/images/js-icon.png" />
+      <img alt="js logo" width="50px" src="/images/js-icon.png" />
       <span className="menu_title">INF310b: React and Express</span>
   </span>
 );

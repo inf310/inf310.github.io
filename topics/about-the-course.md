@@ -20,20 +20,26 @@
 ## Materials
 
 - [Syllabus](https://docs.google.com/document/d/1vK06Qxq2RottrihVFHol-wdwaHekmx35AxzNLEwYcl4/edit?usp=sharing)
-- [Slides](https://modern-js.github.io)
-- [GitHub](https://github.com/modern-js)
+- [Slides](https://inf310.github.io)
+- [GitHub](https://github.com/inf310)
 - [Additional reading materials](/reading-materials/)
 ---
 
 ## Topics
 
-- How React works and how to use it
-- How Express works and how to use it
-- Popular React tools and add-ons
-- Popular Express tools and plug-ins
-- Testing and Build tools
-- Hand-on projects
+- How React works
+- How Express works
+- How to build front-ends with React
+- How to build back-ends with Express
 - Best practices, patterns and architecture
+---
+
+## Topics
+
+- Popular Express middleware and plugins
+- Libraries for writing tests
+- React build tools
+- Hands-on projects
 ---
 
 ## Technologies
@@ -46,40 +52,41 @@
 
 ## Prerequisites
 
-- Basic knowledge of JavaScript
 - Basic knowledge of Git
-- Basic knowledge of HTML and CSS
 - Basic knowledge of HTTP
+- Basic knowledge of JavaScript
+- Basic knowledge of HTML and CSS
 ---
 
 ## Assignments
 
-- Lab sessions (2 x 15%)
-- Homework assignment (30%)
+- 3 lab sessions (3 x 10%)
+- 3 homework assignment (3 x 10%)
 - Mid-term test (15%)
 - Final test (25%)
 ---
 
 ### Lab sessions
 
-- 2 sessions, each worth 15% of the final grade.
+- 3 sessions, each worth 10% of the final grade.
 - Full instructions for each session will be provided in class.
-- Lab sessions will be held in the *2nd*, and *4th* weeks of classes.
+- Lab sessions will be held in the *2nd*, *3rd* and *4th* weeks of classes.
 ---
 
 ### Homework assignment
 
-- 1 continuous assignment worth 30% of the final grade.
-- Implement a project using technologies covered in class
-  - Extra functionality and new tools for bonus points
+- 3 assignments each worth 10% of the final grade.
+- Implement and extend a full-stack project using the technologies covered in class
+  - Start small and simple
+  - Add functionality as you learn
 
 ---
 
 ### Homework assignment (continued)
 
-- Write tests to verify the solution (or TDD)
-- Write a Readme file presenting the solution
-- Push the solution to a github repository
+- Write unit and integration tests
+- Write a Readme file presenting your solution
+- Push the solution to a GitHub repository
 
 ---
 
@@ -100,5 +107,3 @@ multiple choice - and short answer questions.
 ---
 
 ## Questions?
-
-See you on March 8th for our first class :)

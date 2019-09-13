@@ -1,7 +1,7 @@
 # Short course
 # Full-stack JS: React and Express
 
-Find the slides at: https://debel.github.io/fullstack-js
+Find the slides at: https://inf310.github.io/
 
 ---
 

@@ -24,8 +24,8 @@ a JavaScript library for building user interfaces
 
 |     |     |     |
 | --- | --- | --- |
-| ![Tokens](/fullstack-js/images/react/atomic_design_tokens.png) | ![Atoms](/fullstack-js/images/react/atomic_design_atoms.png) | ![Molecules](/fullstack-js/images/react/atomic_design_molecules.png) |
-| ![Organisms](/fullstack-js/images/react/atomic_design_organisms.png) | ![Systems](/fullstack-js/images/react/atomic_design_systems.png) | &nbsp; |
+| ![Tokens](/images/react/atomic_design_tokens.png) | ![Atoms](/images/react/atomic_design_atoms.png) | ![Molecules](/images/react/atomic_design_molecules.png) |
+| ![Organisms](/images/react/atomic_design_organisms.png) | ![Systems](/images/react/atomic_design_systems.png) | &nbsp; |
 
 ---
 
@@ -139,7 +139,7 @@ to be used in functional components
 
 ## Component Lifecycle
 
-![Component lifecycle](/fullstack-js/images/react/component-lifecycle.jpg)
+![Component lifecycle](/images/react/component-lifecycle.jpg)
 
 ---
 
@@ -147,7 +147,7 @@ to be used in functional components
 
 Receive action -> Update state -> Update UI
 
-![The flux architecture](/fullstack-js/images/react/flux.png)
+![The flux architecture](/images/react/flux.png)
 
 ---
 
@@ -156,7 +156,7 @@ Receive action -> Update state -> Update UI
 React's virtual DOM allows it to render the same
 component tree in multiple environments
 
-![cross platform](/fullstack-js/images/react/react-fiber-architecture.png)
+![cross platform](/images/react/react-fiber-architecture.png)
 ---
 
 ## Rendering in the browser
@@ -215,7 +215,7 @@ creating a JSON object that we can inspect and verify in tests
 
 ## Virtual DOM
 
-![Diffing and reconciling](/fullstack-js/images/react/virtualdom.png)
+![Diffing and reconciling](/images/react/virtualdom.png)
 
 ---
 

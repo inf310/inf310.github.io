@@ -39,7 +39,7 @@
 
 ## Short history of web development
 
-![Web development timeline](/fullstack-js/images/web-dev-timeline.png)
+![Web development timeline](/images/web-dev-timeline.png)
 
 ---
 ## Networking
@@ -113,13 +113,13 @@
 
 ## Monolithic architecture
 
-![Monolithic](/fullstack-js/images/monolithic-diagram.png)
+![Monolithic](/images/monolithic-diagram.png)
 
 ---
 
 ## Microservice architecture
 
-![Services](/fullstack-js/images/microservice-diagram.png)
+![Services](/images/microservice-diagram.png)
 
 ---
 

@@ -2,7 +2,7 @@
   "name": "fullstack-js",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://debel.github.io/fullstack-js/",
+  "homepage": "https://inf310.github.io/",
   "dependencies": {
     "react": "^16.8.0-alpha.1",
     "react-dom": "^16.8.0-alpha.1",
