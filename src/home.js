@@ -5,18 +5,17 @@ import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom';
 import Deck from './utils/styled-markdown-deck';
 import Menu from './utils/menu';
 
-const defaultToErrorSlide = err => ({
-  default: `🤕 Something went wrong \n\n ${err} \n\n [Go to course home](/)`
-});
-
 const LoadableDeck = ({ match }) => {
   const topic = (match && match.params.topic) || 'about-the-course';
   const [content, setContent] = React.useState();
   React.useEffect(() => {
     topic && import(`../topics/${topic}.md`)
-      .catch(defaultToErrorSlide)
-      .then(loadedContent => {
-        setContent(loadedContent.default);
+      .catch(error => import('./error.md'))
+      .then(loadedContent =>
+        fetch(loadedContent.default)
+          .then(res => res.text()))
+          .then(loadedContent => {
+        setContent(loadedContent);
         document.title = `INF310: ${topic}`;
         const hash = window.location.hash.length < 2
           ? '#/0'
