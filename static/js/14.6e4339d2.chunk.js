@@ -1,0 +1,2 @@
+(window["webpackJsonpfullstack-js"]=window["webpackJsonpfullstack-js"]||[]).push([[14],{891:function(s,t,a){s.exports=a.p+"static/media/react-patterns.69f9093c.md"}}]);
+//# sourceMappingURL=14.6e4339d2.chunk.js.map

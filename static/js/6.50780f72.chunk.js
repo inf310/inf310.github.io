@@ -1,0 +1,2 @@
+(window["webpackJsonpfullstack-js"]=window["webpackJsonpfullstack-js"]||[]).push([[6],{883:function(s,c,e){s.exports=e.p+"static/media/exercise-1.689c91ed.md"}}]);
+//# sourceMappingURL=6.50780f72.chunk.js.map

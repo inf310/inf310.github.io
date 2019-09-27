@@ -1,0 +1,2 @@
+(window["webpackJsonpfullstack-js"]=window["webpackJsonpfullstack-js"]||[]).push([[7],{884:function(s,a,d){s.exports=d.p+"static/media/express-and-files.ddaed08a.md"}}]);
+//# sourceMappingURL=7.8475aef9.chunk.js.map
