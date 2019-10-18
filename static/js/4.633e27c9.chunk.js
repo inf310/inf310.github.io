@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{884:function(n,t){n.exports='# In-class exercise 1\n### Which button was clicked\n---\n\n1) Create a new React project\n\n--\n\n2) Add 2 buttons to the page "A" and "B"\n\n--\n\n3) Add a text field on the page that reflects which button was clicked last\n\n--\n\n4) Push the solution to GitHub\n'}}]);
+//# sourceMappingURL=4.633e27c9.chunk.js.map
